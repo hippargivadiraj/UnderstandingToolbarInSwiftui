@@ -13,20 +13,20 @@ struct UsingToolbarItem: View {
     var body: some View {
         
         NavigationView{
-        List(messages, id: \.self) { message in
-                   Text(message)
-               }
-               .navigationTitle("Messages")
-               .toolbar {
-                   ToolbarItem(placement: .primaryAction) {
-                       Button("New") {}
-                   }
-
-                   ToolbarItem(placement: .bottomBar) {
-                       Button("Filter") {}
-                   }
-    }
-    }
+            List(messages, id: \.self) { message in
+                Text(message)
+            }
+            .navigationTitle("Messages")
+            .toolbar {
+                ToolbarItem(placement: .primaryAction) {
+                    Button("New") {}
+                }
+                
+                ToolbarItem(placement: .bottomBar) {
+                    Button("Filter") {}
+                }
+            }
+        }
     }
 }
 
