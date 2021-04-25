@@ -8,9 +8,17 @@
 import SwiftUI
 
 struct ContentView: View {
+    let messages: [String] = ["a", "b"]
+
+    
     var body: some View {
-        Text("Hello, world!")
-            .padding()
+        NavigationView{
+        List(messages, id: \.self) { message in
+                    Text(message)
+                }
+                .navigationTitle("Messages")
+                .navigationBarItems(trailing: EditButton())
+        }
     }
 }
 
